@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - sprites</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+		<style type="text/css" media="screen">
+			body {
+				background: #87DAE0;
+				border: 0;
+				margin: 0;
+			}
+			canvas {
+				background: #BFE0DE;
+			}
+			#name {
+				position: absolute;
+				z-index: 10;
+				width: 100%;
+				height: 100%;
+				
+				clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+			}
+			#name .background {
+				position: absolute;
+				width: 30rem;
+				height: 300vh;
+				top: -100vh;
+				left: 65%;
+				/*transform-origin: center center;*/
+				transform: rotate(45deg);
+				
+				background-color: #F15387;
+			}
+			#name .text {
+				font-family: "Courier New";
+				position: absolute;
+				font-size: 7rem;
+				left: 60%;
+				top: 46%;
+				color: white;
+			}
+		</style>
+		<div id="name">
+			<div class="background"> </div>
+			<div class="text">zero-sum</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/94/three.min.js"></script>
+		<script type="text/javascript">
+
+			var camera, scene, renderer;
+
+			var spriteTL, spriteTR, spriteBL, spriteBR, spriteC;
+
+
+			var groups = [];
+
+			init();
+			animate();
+
+
+
+			function init() {
+
+				var width = window.innerWidth;
+				var height = window.innerHeight;
+
+				camera = new THREE.PerspectiveCamera( 60, width / height, 1, 2100 );
+				camera.position.z = 1000;
+
+
+				scene = new THREE.Scene();
+
+				// create sprites
+
+				var amount = 30;
+				var radius = 50;
+
+				var textureLoader = new THREE.TextureLoader();
+
+				let spriteMap = textureLoader.load( "textures/4.png");
+				let spriteMaterial = new THREE.SpriteMaterial( { map: spriteMap } );
+				let sprite = new THREE.Sprite( spriteMaterial );
+
+				console.log(spriteMaterial)
+				let sprite_width = spriteMaterial.map.image || 256
+				let sprite_height = spriteMaterial.map.image || 256
+				sprite.center.set(0.5, 0.5)
+				console.log(sprite_width, sprite_height)
+				sprite.scale.set(sprite_width, sprite_height, 1)
+				
+				for(let i = 0; i<15; i++){
+					let group = new THREE.Group();
+
+					for ( let a = 0; a < amount; a ++ ) {
+
+						var x = a * 150;
+						var y = a * 150;
+						var z = 0;
+
+						var material;
+
+						if ( z < 0 ) {
+
+							material = spriteMaterial.clone();
+
+						} else {
+
+							material = spriteMaterial.clone();
+							material.color.setHSL( 0.5 * Math.random(), 0.75, 0.5 );
+							material.map.offset.set( - 0.5, - 0.5 );
+							material.map.repeat.set( 2, 2 );
+
+						}
+
+						let sprite = new THREE.Sprite( material );
+
+						sprite.position.set( x, y, z );
+						sprite.center.set(0.5, 0.5)
+						sprite.scale.set(256, 256)
+						group.add( sprite );
+
+					}
+					group.position.x = -2000 + i * 300;
+					group.position.y = -500
+					groups.push(group);
+					scene.add( group );
+				}
+
+				// renderer
+
+				renderer = new THREE.WebGLRenderer({
+					alpha: true
+				});
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.autoClear = true; // To allow render overlay on top of sprited sphere
+
+				document.body.appendChild( renderer.domElement );
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function onWindowResize() {
+
+				var width = window.innerWidth;
+				var height = window.innerHeight;
+
+				camera.aspect = width / height;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				render();
+
+			}
+
+			function render() {
+
+				var time = Date.now() / 1000;
+
+				for (let i = 0; i<groups.length; i++){
+					let group = groups[i]
+					let change = -0.50
+					if (i%2==0){
+						change = 0.50
+					}
+					groups[i].position.x += change
+					groups[i].position.y += change
+				}
+
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+	</body>
+</html>
