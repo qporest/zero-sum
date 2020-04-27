@@ -6,7 +6,8 @@ body {
 canvas {
 	width: 100vw;
 	height: 100vh;
-	background: linear-gradient(90deg, rgba(230,99,200,1) 0%, rgba(133,240,177,1) 35%, rgba(44,219,255,1) 100%);
+	background:  white;
+	/*linear-gradient(90deg, rgba(230,99,200,1) 0%, rgba(133,240,177,1) 35%, rgba(44,219,255,1) 100%);*/
 }
 #name {
 	position: absolute;
@@ -29,7 +30,6 @@ canvas {
 	background: black;
 }
 #name .text {
-	
 	position: absolute;
 	display: flex;
 	flex-direction: column;
@@ -39,7 +39,21 @@ canvas {
 	left: 59%;
 	top: 0%;
 	color: white;
+}
 
+#name .social {
+	display: flex;
+	width: 70%;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+#name .social div {
+	color: white;
+}
+
+#name .social li {
+	display: 
 }
 
 #name .text h2 {
