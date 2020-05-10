@@ -23,8 +23,8 @@ collections:
         name: 'showlist'
         file: 'content/shows.yml'
         fields:
-	  - label: Show
-	    name: shows
+          - label: Show
+            name: shows
             widget: list
             fields:
               - {label: Title, name: title, widget: string}
