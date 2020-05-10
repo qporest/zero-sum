@@ -16,3 +16,14 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'shows'
+    label: 'Shows'
+    files: 
+      - label: 'New show'
+        name: 'show'
+        file: 'content/shows.yml'
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Location, name: location, widget: string}
+          - {label: Tickets, name: tickets, widget: string}
+          - {label: Start time, name: time, widget: datetime, dateFormat: MM.DD.YYYY, timeFormat: "HH:mm"}
