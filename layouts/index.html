@@ -5,8 +5,8 @@
 		<title>three.js webgl - sprites</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-		<link type="text/css" rel="stylesheet" href="/css/main.css">
+		
+		<link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/index.css">
 	</head>
 
 	<body>
@@ -21,6 +21,18 @@
 				</div>
 			</div>
 		</div>
+		
+		<script src="https://threejs.org/build/three.js"></script>
+		<script src="/js/EffectComposer.js"></script>
+		<script src="/js/ShaderPass.js"></script>
+		<script src="/js/CopyShader.js"></script>
+		<script src="/js/ClearPass.js"></script>
+		<script src="/js/TexturePass.js"></script>
+		<script src="/js/RenderPass.js"></script>
+		<script src="/js/DigitalGlitch.js"></script>
+		<script src="/js/GlitchPass.js"></script>
+		<script src="/js/index.js"></script>
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 		<script>
 		  if (window.netlifyIdentity) {
 		    window.netlifyIdentity.on("init", user => {
@@ -32,7 +44,5 @@
 		    });
 		  }
 		</script>
-		<script src="/js/three.min.js"></script>
-		<script src="/js/main.js"></script>
 	</body>
 </html>

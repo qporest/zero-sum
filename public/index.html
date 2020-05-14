@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta name="generator" content="Hugo 0.70.0" />
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>three.js webgl - sprites</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		
+		<link type="text/css" rel="stylesheet" href="/css/main.css">
+	</head>
+
+	<body>
+		<div id="name">
+			<div class="background"> </div>
+			<div class="text">
+				<h2>zero-sum</h2>
+				<div class="social">
+					<div>A</div>
+					<div>B</div>
+					<div>C</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="/js/three.min.js"></script>
+		<script src="/js/MathUtils.js"></script>
+		<script src="/js/EffectComposer.js"></script>
+		<script src="/js/ShaderPass.js"></script>
+		<script src="/js/CopyShader.js"></script>
+		<script src="/js/RenderPass.js"></script>
+		<script src="/js/DigitalGlitch.js"></script>
+		<script src="/js/GlitchPass.js"></script>
+		<script src="/js/main.js"></script>
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+		<script>
+		  if (window.netlifyIdentity) {
+		    window.netlifyIdentity.on("init", user => {
+		      if (!user) {
+		        window.netlifyIdentity.on("login", () => {
+		          document.location.href = "/admin/";
+		        });
+		      }
+		    });
+		  }
+		</script>
+	</body>
+</html>
