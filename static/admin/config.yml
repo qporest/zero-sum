@@ -21,7 +21,7 @@ collections:
     files: 
       - label: 'Show list'
         name: 'showlist'
-        file: 'content/shows.yml'
+        file: 'data/shows.yml'
         fields:
           - label: Show
             name: shows
