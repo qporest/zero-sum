@@ -14,4 +14,8 @@ shows:
   - time: 2020-05-25T01:23:21.962Z
     title: Third
     location: Here
-    tickets: No
+    tickets: false
+  - time: 2020-05-12T21:48:38.719Z
+    title: Test title
+    location: Here
+    tickets: sdfsdf
