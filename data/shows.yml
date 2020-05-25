@@ -11,3 +11,7 @@ shows:
     title: A
     location: b
     tickets: c
+  - time: 2020-05-25T01:23:21.962Z
+    title: Third
+    location: Here
+    tickets: No
