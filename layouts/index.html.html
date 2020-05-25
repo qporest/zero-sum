@@ -10,7 +10,7 @@
 	</head>
 
 	<body>
-		<div id="name">
+		<section id="name">
 			<div class="background"> </div>
 			<div class="text">
 				<h2>zero-sum</h2>
@@ -20,8 +20,37 @@
 					<div>C</div>
 				</div>
 			</div>
-		</div>
-		
+		</section>
+		<section id="info">
+			<nav>
+				zero-sum
+				<ul>
+					<li>ICON</li>
+					<li>NEWS</li>
+					<li>GALLERY</li>
+					<li>ABOUT / EPK</li>
+				</ul>
+			</nav>
+			<div class="centered">
+				<div class="container">
+					<div class="widget">
+						test
+					</div>
+					<div class="latest-news">
+						test
+					</div>
+					<div class="shows">
+						<ul>
+						{{ range .Site.Data.shows.shows }}
+						  <li>
+						  	{{ dateFormat "2006/01/02 15:04" .time }} {{ .title }} at {{ .location }}. <a href="{{ .tickets }}">Buy tickets here</a>
+						  </li>
+						{{ end }}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
 		<script src="https://threejs.org/build/three.js"></script>
 		<script src="/js/EffectComposer.js"></script>
 		<script src="/js/ShaderPass.js"></script>

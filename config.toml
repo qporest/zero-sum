@@ -9,21 +9,22 @@ pygmentsCodefences       = true
 # googleAnalytics        = ""                               # Tracking code, eg. "UA-111111111-1"
 
 [params]
+    showDate             = true
     dateform             = "Mon Jan 02, 2006"
     dateformfull         = "Mon Jan 2 2006 15:04:05 EST"
     favicon              = "sam.ico"
     homepage             = "main"                           # What to call the home page link
-    footerText           = "Call me Sam, a theme for Hugo."
+    footerText           = "zero-sum's website created by @qporest using Hugo and modified theme Sam"
 
 # Metadata for Open Graph and Twitter
-    description          = "A new Hugo site."               # Max 160 characters show in search results
+    description          = "Punk rock band from OH."               # Max 160 characters show in search results
     images               = ["tn.png"]                       # Image that shows on Twitter cards and Open Graph links to the site
-    title                = "Call me Sam"
+    title                = "zero-sum"
     # rss                = ""
 
 [[params.mainMenu]]
-    link = "posts"
-    text = "posts"
+    link = "news"
+    text = "News"
 
 [[params.mainMenu]]
     link = "gallery"
