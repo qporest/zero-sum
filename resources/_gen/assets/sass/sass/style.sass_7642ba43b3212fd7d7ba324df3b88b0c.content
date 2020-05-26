@@ -5,7 +5,7 @@
   box-sizing: border-box; }
 
 html {
-  background-color: #23E4A8;
+  background-color: #00C76C;
   font-family: "Didact Gothic", "sans serif";
   font-size: 16px; }
 
@@ -39,15 +39,15 @@ p {
   display: inline; }
 
 a {
-  color: #F96346;
+  color: #FF6D4C;
   text-decoration: none;
-  border-bottom: 2px solid #F96346;
+  border-bottom: 2px solid #FF6D4C;
   transition: 0.5s ease; }
   a:hover {
     color: white;
     font-style: none; }
   a:active {
-    color: #F96346; }
+    color: #FF6D4C; }
 
 button {
   padding: 20px;
@@ -55,7 +55,7 @@ button {
   border-radius: 5px;
   background: #ffffff; }
   button:hover {
-    box-shadow: 5px 5px #F96346; }
+    box-shadow: 5px 5px #FF6D4C; }
 
 hr {
   margin: 1rem 0;
@@ -108,7 +108,8 @@ nav {
   padding: 20px 10px;
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+  font-size: 1.3rem; }
   .top-menu span {
     color: #FC352F; }
   .top-menu a {
@@ -198,7 +199,7 @@ article {
     font-family: 'Source Code Pro', monospace;
     padding: 0.1rem;
     border-radius: 3px;
-    border: 1px solid #F96346; }
+    border: 1px solid #FF6D4C; }
   article img {
     width: 100%;
     max-width: 100%;
@@ -206,13 +207,13 @@ article {
     margin: 2rem auto;
     opacity: 1; }
   article blockquote {
-    background-color: #F96346;
-    color: #23E4A8;
+    background-color: #FF6D4C;
+    color: #00C76C;
     padding: 2rem;
     margin: 2rem 1rem 2rem 1rem;
     border-radius: 3px; }
     article blockquote a {
-      color: #F96346; }
+      color: #FF6D4C; }
     article blockquote ul {
       margin-top: 1rem; }
     article blockquote li {
@@ -227,7 +228,7 @@ article {
     article table td, article table th {
       padding: 2px 5px;
       text-align: center;
-      border: 1px solid #F96346; }
+      border: 1px solid #FF6D4C; }
   article li {
     line-height: 2;
     padding-left: 0.4rem; }
