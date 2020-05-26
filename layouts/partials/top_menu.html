@@ -1,17 +1,15 @@
 
     <nav role="navigation" class="top-menu">
+        <a href="{{ .Site.Home | relURL }}">
+                zero-sum
+            </a>
+
         {{ if or ((.Page.Site.Params.mainMenu) (.show_back_menu_item)) }}
         <ul>
         {{ end }}
-            <li><a href="{{ .Site.Home | relURL }}">
-                zero-sum
-            </a></li>
-            <span>&#183; </span>
+            
             {{ if .show_back_menu_item }}
                 <li><a href="{{ .Page.Section | relURL }}">back</a></li>
-                {{ if .Page.Site.Params.mainMenu }}
-                    <span>&#183;</span>
-                {{ end }}
             {{ end }}
 
             {{ if .Page.Site.Params.mainMenu }}
@@ -21,7 +19,6 @@
             
             {{ if ( gt ( len .Page.Site.Params.mainMenu ) 1 ) }}
                 {{ range after 1 .Page.Site.Params.mainMenu }}
-                    <span>&#183; </span>
                     <li><a href="{{ .link | relURL }}">{{ .text }}</a></li>
                 {{ end }}
             {{ end }}

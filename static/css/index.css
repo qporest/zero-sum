@@ -37,10 +37,6 @@ canvas {
 	color: white;
 }
 
-#name .text h2 {
-	text-shadow: 4px 4px #D87F00;
-	opacity: 1;
-}
 
 #name .social {
 	display: flex;
@@ -61,7 +57,9 @@ canvas {
 	font-family: "Courier New";
 	text-align: center;
 	font-weight: lighter;
-	font-size: 6rem;
+	font-size: 4rem;
+	text-shadow: 4px 4px #D87F00;
+	opacity: 1;
 }
 
 /* Content section */

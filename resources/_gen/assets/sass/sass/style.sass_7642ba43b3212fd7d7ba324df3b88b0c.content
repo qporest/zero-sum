@@ -99,6 +99,11 @@ nav {
   align-items: center;
   text-align: center; }
 
+section.navigation {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px; }
+
 .top-menu {
   font-family: "Courier New";
   position: sticky;
@@ -108,8 +113,11 @@ nav {
   padding: 20px 10px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   font-size: 1.3rem; }
+  @media screen and (max-width: 736px) {
+    .top-menu {
+      flex-direction: column; } }
   .top-menu span {
     color: #FC352F; }
   .top-menu a {
@@ -121,6 +129,12 @@ nav {
     display: inline-block; }
     .top-menu a:hover {
       text-shadow: 2px 2px #FC352F; }
+    @media screen and (max-width: 736px) {
+      .top-menu a {
+        margin: auto; } }
+  @media screen and (max-width: 736px) {
+    .top-menu ul {
+      margin: auto; } }
   .top-menu ul, .top-menu li {
     opacity: 1;
     list-style: none;
