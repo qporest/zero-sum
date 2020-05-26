@@ -1,5 +1,4 @@
 body {
-	background: #DFE1D0;
 	border: 0;
 	margin: 0;
 }
@@ -16,34 +15,36 @@ canvas {
 	height: 100%;
 	overflow: hidden;
 }
-#name .background {
-	min-height: 1000px;
+/*#name .background {
 	position: absolute;
 	width: 30rem;
-	height: 300vh;
-	top: -100vh;
-	left: 60%;
-	/*transform-origin: center center;*/
-	transform: rotate(45deg);
-	border-left: 3px solid ;
-	background: #F15387;
-	background: black;
-}
+	height: 100vh;
+	top: 0;
+	left: 59%;
+	transform-origin: center center;
+	border-left: 3px solid;
+	border: 40px solid #39424E;
+	background: #39424E;
+}*/
 #name .text {
 	position: absolute;
+	margin: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	width: 30rem;
+	width: 100vw;
 	height: 100vh;
-	left: 59%;
-	top: 0%;
 	color: white;
+}
+
+#name .text h2 {
+	text-shadow: 4px 4px #D87F00;
+	opacity: 1;
 }
 
 #name .social {
 	display: flex;
-	width: 70%;
+	width: 100%;
 	flex-direction: row;
 	justify-content: space-around;
 }
@@ -67,6 +68,7 @@ canvas {
 #info {
 	position: relative;
 	padding-top: 100vh;
+	width: 100%;
 }
 
 #info .centered {
@@ -76,20 +78,10 @@ canvas {
 	justify-content: center;
 }
 
-nav {
-	position: -webkit-sticky; /* Safari */
-	position: sticky;
-	top: 0;
-}
-
-nav ul, nav li {
-	list-style: none;
-	display: inline-block;
-}
-
 
 .container {
 	display: grid;
+	grid-template-columns: 1fr 1fr;
 	grid-template-areas: 
 		"widget news "
 		"widget shows";
@@ -97,7 +89,7 @@ nav ul, nav li {
 
 .widget {
 	grid-area: widget;
-	background: #4F6CF4;
+	background: #4F6CF4;	
 }
 
 .latest-news {
@@ -109,3 +101,50 @@ nav ul, nav li {
 	background: #C4FA54;
 	grid-area: shows;
 }
+
+#scroll-down {
+	position: absolute;
+	top: 80%;
+	left: calc(50% - 30px);
+	width: 60px;
+	height: 60px;
+	background: #D87F00;
+	clip-path: polygon(100% 50%, 50% 100%, 0 50%, 0 0, 50% 50%, 100% 0);
+	-webkit-clip-path: polygon(100% 50%, 50% 100%, 0 50%, 0 0, 50% 50%, 100% 0);
+	will-change: transform;
+	animation: InviteMove 1.5s ease-in-out 0s infinite normal forwards;
+}
+
+/*#scroll-down {
+	position: absolute;
+	top: 80%;
+	left: calc(50% - 30px);
+	width: 0;
+	height: 0;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-top: 100px solid #400a4f;
+	animation: InviteMove 2s ease 0s infinite normal forwards;
+}
+
+#scroll-down:before {
+	content: "";
+	position: absolute;
+	top: 0%;
+	left: calc(50% - 30px);
+	width: 0;
+	height: 0;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-top: 100px solid #400a4f;
+}*/
+
+@keyframes InviteMove {
+    0.0%{
+        transform: translate3d(0, 0, 0);
+    }
+   
+    50%{
+        transform: translate3d(0, -20px, 0);
+    }
+} 

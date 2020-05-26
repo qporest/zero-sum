@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-    	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>three.js webgl - sprites</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		
-		<link type="text/css" rel="stylesheet" href="/css/index.css">
+	    {{ block "head" . }}
+	    {{ partial "head.html" . }}
+	    {{ end }}
+
+	    {{ block "head_resources" . }}
+	    <!-- Use this block to link to further resources like .js or .css files. -->
+	    {{ end }}
+	    <title>
+	        {{ block "title" . }}
+	        {{ .Title | markdownify}}
+	        {{ end }}
+	    </title>
+	    <link type="text/css" rel="stylesheet" href="/css/index.css">
 	</head>
 
 	<body>
 		<section id="name">
-			<div class="background"> </div>
+			<!-- <div class="background"> </div> -->
 			<div class="text">
 				<h2>zero-sum</h2>
 				<div class="social">
@@ -20,9 +27,10 @@
 					<div>C</div>
 				</div>
 			</div>
+			<div id="scroll-down"></div>
 		</section>
 		<section id="info">
-			<nav>
+			<!-- <nav>
 				zero-sum
 				<ul>
 					<li>ICON</li>
@@ -30,7 +38,10 @@
 					<li>GALLERY</li>
 					<li>ABOUT / EPK</li>
 				</ul>
-			</nav>
+			</nav> -->
+			{{ block "top-menu" . }}
+			        {{ partial "top_menu.html" (dict "Page" . "show_back_menu_item" false) }}
+			{{ end }}
 			<div class="centered">
 				<div class="container">
 					<div class="widget">
@@ -51,6 +62,11 @@
 				</div>
 			</div>
 		</section>
+		<script type="text/javascript" charset="utf-8">
+			function addElementToDom(elem){
+				document.querySelector("#name").appendChild( elem )
+			}
+		</script>
 		<script src="https://threejs.org/build/three.js"></script>
 		<script src="/js/EffectComposer.js"></script>
 		<script src="/js/ShaderPass.js"></script>

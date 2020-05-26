@@ -19,9 +19,9 @@
 <body>
     {{ block "top-menu" . }}
         {{ if .Site.Params.mainMenu }}
-        <nav role="navigation" class="flex-container top-menu">
+        <section class="navigation">
             {{ partial "top_menu.html" (dict "Page" . "show_back_menu_item" false) }}
-        </nav>
+        </section>
         {{ end }}
     {{ end }}
     {{ block "main" . }} 
@@ -39,6 +39,21 @@
     <footer class="flex-container footer">{{ partial "footer.html" . }}</footer>
     {{ end }}
     {{ end }}
+    <script type="text/javascript" charset="utf-8">
+        function addElementToDom(elem){
+            document.querySelector("section.navigation").appendChild( elem )
+        }
+    </script>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="/js/EffectComposer.js"></script>
+    <script src="/js/ShaderPass.js"></script>
+    <script src="/js/CopyShader.js"></script>
+    <script src="/js/ClearPass.js"></script>
+    <script src="/js/TexturePass.js"></script>
+    <script src="/js/RenderPass.js"></script>
+    <script src="/js/DigitalGlitch.js"></script>
+    <script src="/js/GlitchPass.js"></script>
+    <!-- <script src="/js/index.js"></script> -->
 </body>
 
 </html>
