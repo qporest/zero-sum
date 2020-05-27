@@ -5,14 +5,14 @@
   box-sizing: border-box; }
 
 html {
-  background-color: #ffbd00;
+  background-color: #1A0E3A;
   font-family: "Didact Gothic", "sans serif";
   font-size: 16px; }
 
 body {
   font-size: 16px;
   font-family: "Didact Gothic", "sans serif";
-  color: #020202;
+  color: #FFFFFF;
   line-height: 2rem;
   letter-spacing: 1.5px;
   text-shadow: none;
@@ -103,6 +103,8 @@ section.navigation {
   width: 100%;
   position: relative;
   margin-bottom: 20px; }
+  section.navigation:after {
+    content: ""; }
 
 .top-menu {
   font-family: "Courier New";
@@ -141,19 +143,17 @@ section.navigation {
     display: inline-block; }
 
 .footer {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   background-color: transparent;
   position: relative;
   bottom: 0;
-  padding: 1rem;
   font-family: "Didact Gothic", "sans serif";
   font-size: 1rem;
   line-height: 1em;
-  opacity: 0.8; }
+  opacity: 0.8;
+  margin-top: 3em; }
   .footer a {
     border-bottom: none;
     display: contents; }
@@ -222,7 +222,7 @@ article {
     opacity: 1; }
   article blockquote {
     background-color: #9e0059;
-    color: #ffbd00;
+    color: #1A0E3A;
     padding: 2rem;
     margin: 2rem 1rem 2rem 1rem;
     border-radius: 3px; }
@@ -261,9 +261,9 @@ article {
       border: 0; }
     article .gist .gist-meta {
       background-color: transparent;
-      color: #020202; }
+      color: #FFFFFF; }
       article .gist .gist-meta a {
-        color: #020202; }
+        color: #FFFFFF; }
 
 .tag {
   padding: 0.25em 0em;
