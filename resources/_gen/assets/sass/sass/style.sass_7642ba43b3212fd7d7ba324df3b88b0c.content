@@ -49,14 +49,6 @@ a {
   a:active {
     color: #9e0059; }
 
-button {
-  padding: 20px;
-  border: 0px;
-  border-radius: 5px;
-  background: #ffffff; }
-  button:hover {
-    box-shadow: 5px 5px #9e0059; }
-
 hr {
   margin: 1rem 0;
   background-color: transparent;
@@ -145,7 +137,6 @@ section.navigation {
 .footer {
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: transparent;
   position: relative;
   bottom: 0;
