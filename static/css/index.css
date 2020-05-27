@@ -58,7 +58,7 @@ canvas {
 	text-align: center;
 	font-weight: lighter;
 	font-size: 4rem;
-	text-shadow: 4px 4px #D87F00;
+	text-shadow: 4px 4px #9e0059;
 	opacity: 1;
 }
 
@@ -106,7 +106,7 @@ canvas {
 	left: calc(50% - 30px);
 	width: 60px;
 	height: 60px;
-	background: #D87F00;
+	background: #9e0059;
 	clip-path: polygon(100% 50%, 50% 100%, 0 50%, 0 0, 50% 50%, 100% 0);
 	-webkit-clip-path: polygon(100% 50%, 50% 100%, 0 50%, 0 0, 50% 50%, 100% 0);
 	will-change: transform;
