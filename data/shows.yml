@@ -5,17 +5,17 @@ time: 2020-05-10T20:38:07.654Z
 shows:
   - time: 2020-05-10T20:49:46.538Z
     title: A
-    location: " B"
+    location: " Best place to meet your friends"
     tickets: C
   - time: 2020-05-15T20:49:47.563Z
     title: A
-    location: b
+    location: Ugly tuna ofc
     tickets: c
   - time: 2020-05-25T01:23:21.962Z
     title: Third
-    location: Here
+    location: It ain't here
     tickets: false
   - time: 2020-05-12T21:48:38.719Z
-    title: Test title
-    location: Here
+    title: Very very very long title name just to test everything
+    location: Here of couse it's also bery long
     tickets: sdfsdf
