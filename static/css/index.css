@@ -123,7 +123,7 @@ canvas {
 .card {
 	width: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	margin: 20px;
 	max-width: 500px;
