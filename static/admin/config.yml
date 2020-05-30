@@ -33,6 +33,7 @@ collections:
               - {label: Start time, name: time, widget: datetime, dateFormat: MM.DD.YYYY, timeFormat: "HH:mm"}
       - label: "Banner"
         name: "banner"
+        file: 'data/banner.yml'
         fields:
           - label: "Choose Banner News"
             name: "bannernews"
