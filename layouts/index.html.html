@@ -31,37 +31,43 @@
 			<div id="scroll-down"></div>
 		</section>
 		<section id="info">
-			<!-- <nav>
-				zero-sum
-				<ul>
-					<li>ICON</li>
-					<li>NEWS</li>
-					<li>GALLERY</li>
-					<li>ABOUT / EPK</li>
-				</ul>
-			</nav> -->
 			{{ block "top-menu" . }}
 			        {{ partial "top_menu.html" (dict "Page" . "show_back_menu_item" false) }}
 			{{ end }}
 			<div class="centered">
 				<div class="container">
-					<div class="widget card">
-						<iframe src="https://open.spotify.com/embed/album/5RQlhjpn4qz3q2vRrAGYD9" width="320" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+					<div class="widget">
+						<iframe class="card" src="https://open.spotify.com/embed/album/5RQlhjpn4qz3q2vRrAGYD9" width="320" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 					</div>
-					<div class="latest-news card">
-						<h3>Latest news:</h3>
-						{{- range ( where site.RegularPages "Section" "news" | first 1 ) }}
-						<p>{{ .Title }}</p>
-						{{- end }}
-					</div>
-					<div class="shows card">
-						<ul>
-						{{ range .Site.Data.shows.shows }}
-						  <li>
-						  	{{ dateFormat "2006/01/02 15:04" .time }} {{ .title }} at {{ .location }}. <a href="{{ .tickets }}">Buy tickets here</a>
-						  </li>
-						{{ end }}
-						</ul>
+					<div class="grid-info">
+						<div class="latest-news card">
+							<h3>Latest news:</h3>
+							{{- range ( where site.RegularPages "Section" "news" | first 1 ) }}
+							<p>{{ .Title }}</p>
+							{{- end }}
+						</div>
+						<div class="shows card">
+							<table>
+								<thead>
+									<tr>
+										<th scope="col">Date</th>
+										<th scope="col">Concert</th>
+										<th scope="col">Location</th>
+										<th scope="col">Tickets</th>
+									</tr>
+								</thead>
+							<tbody>						
+							{{ range .Site.Data.shows.shows }}
+							  <tr>
+							  	<td>{{ dateFormat "2006/01/02" .time }} <br/> at {{ dateFormat "15:04" .time }}</td>
+							  	<td>{{ .title }}</td>
+							  	<td>at {{ .location }}</td>
+							  	<td><a href="{{ .tickets }}">Get Tickets!</a></td>
+							  </tr>
+							{{ end }}
+							</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>

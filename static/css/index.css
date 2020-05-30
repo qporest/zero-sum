@@ -81,17 +81,38 @@ canvas {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas: 
-		"widget news "
-		"widget shows";
+		"widget info";
 	justify-items: center;
+}
+
+.container > * {
+	width: 100%;
+}
+
+.grid-info {
+	position: relative;
+	grid-area: info;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+
+.grid-info .card {
+	padding: 5px 12px;
+	margin-bottom: 15px;
 }
 
 .widget {
 	grid-area: widget;
+	width: 100%;
+	min-height: 400px;
+	max-width: 500px;
 	/*background: #424662;	*/
 }
 
 .widget iframe {
+	max-height: 500px;
+	height: 100%;
 	width: 100%;
 	margin: auto;
 	display: block;
@@ -99,12 +120,32 @@ canvas {
 
 .latest-news {
 	background: #F25928;
-	grid-area: news;
 }
 
 .shows {
 	background: #3E9DFC;
-	grid-area: shows;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 600px;
+	margin: 12px auto;
+	text-align: left;
+}
+
+tr {
+	border-bottom: 1px solid white;
+	transition: background-color 0.2s ease-out;
+}
+
+tr:hover {
+	background: #555;
+}
+
+td {
+	box-sizing: border-box;
+	padding: 1px 3px;
 }
 
 #scroll-down {
@@ -122,16 +163,13 @@ canvas {
 
 .card {
 	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin: 20px;
-	max-width: 500px;
-	/*padding: 5px 12px;*/
+	max-width: 700px;
 	box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+	margin: 0 auto;
 }
 
 .button {
+	box-sizing: border-box;
 	padding: 5px 12px;
 	border-radius: 20px;
 	display: block;
