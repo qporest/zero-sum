@@ -39,9 +39,9 @@ collections:
             name: "bannernews"
             widget: "relation"
             collection: "news"
-            searchFields: ["title", "description"]
+            searchFields: ["title"]
             valueField: "slug"
-            displayFields: ["twitterHandle", "followerCount"]
+            displayFields: ["title"]
           - label: "Featured Image"
             name: "thumbnail"
             widget: "image"
