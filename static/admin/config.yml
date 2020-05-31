@@ -40,7 +40,7 @@ collections:
             widget: "relation"
             collection: "news"
             searchFields: ["title"]
-            valueField: "slug"
+            valueField: "{{slug}}"
             displayFields: ["title"]
           - label: "Featured Image"
             name: "thumbnail"
