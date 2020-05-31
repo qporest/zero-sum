@@ -34,6 +34,14 @@
 			{{ block "top-menu" . }}
 			        {{ partial "top_menu.html" (dict "Page" . "show_back_menu_item" false) }}
 			{{ end }}
+			{{ if .GetPage (printf "%s%s" "news/" .Site.Data.banner.bannernews) }}
+			<div class="banner">
+				<img src="{{ .Site.Data.banner.thumbnail }}" alt="">
+				{{ with .GetPage (printf "%s%s" "news/" .Site.Data.banner.bannernews) }}
+				<h1><a href="{{ .RelPermalink }}" >{{ .Title }}</a></h1>
+				{{ end }}
+			</div>
+			{{ end }}
 			<div class="centered">
 				<div class="container">
 					<div class="widget">

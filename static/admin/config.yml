@@ -42,6 +42,7 @@ collections:
             searchFields: ["title"]
             valueField: "{{slug}}"
             displayFields: ["title"]
+            required: false
           - label: "Featured Image"
             name: "thumbnail"
             widget: "image"

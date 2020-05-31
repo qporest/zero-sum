@@ -126,6 +126,29 @@ canvas {
 	background: #3E9DFC;
 }
 
+.banner {
+	width: 100%;
+	max-height: 150px;
+	display: flex;
+	flex-direction: row;	
+	background: #FF0069;
+	margin: 20px 0;
+}
+
+.banner img {
+	max-height: 150px;
+	display: inline-block;
+}
+
+.banner a {
+	color: white;
+}
+
+.banner h1 {
+	line-height: 150px;	
+	display: inline-block;
+}
+
 table {
 	border-collapse: collapse;
 	width: 100%;

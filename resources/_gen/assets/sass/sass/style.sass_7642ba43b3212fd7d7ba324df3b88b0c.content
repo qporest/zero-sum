@@ -99,6 +99,7 @@ section.navigation {
     content: ""; }
 
 .top-menu {
+  background-color: #1A0E3A;
   font-family: "Courier New";
   position: sticky;
   top: 0;
