@@ -24,7 +24,7 @@ pygmentsCodefences       = true
 
 [[params.mainMenu]]
     link = "news"
-    text = "News"
+    text = "news"
 
 [[params.mainMenu]]
     link = "gallery"

@@ -35,12 +35,17 @@
 			        {{ partial "top_menu.html" (dict "Page" . "show_back_menu_item" false) }}
 			{{ end }}
 			{{ if .GetPage (printf "%s%s" "news/" .Site.Data.banner.bannernews) }}
-			<div class="banner">
-				<img src="{{ .Site.Data.banner.thumbnail }}" alt="">
 				{{ with .GetPage (printf "%s%s" "news/" .Site.Data.banner.bannernews) }}
-				<h1><a href="{{ .RelPermalink }}" >{{ .Title }}</a></h1>
+				<a href="{{ .RelPermalink }}" class="banner">
+					<div>
+						<img src="{{ .Site.Data.banner.thumbnail }}" alt="">
+						<div class="banner-info">
+							<h1>{{ .Title }}</h1>
+							<h4>Read now!</h4>
+						</div>
+					</div>
+				</a>
 				{{ end }}
-			</div>
 			{{ end }}
 			<div class="centered">
 				<div class="container">
@@ -49,7 +54,7 @@
 					</div>
 					<div class="grid-info">
 						<div class="latest-news card">
-							<h3>Latest news:</h3>
+							<h2>Latest news:</h2>
 							{{- range ( where site.RegularPages "Section" "news" | first 1 ) }}
 							<p>{{ .Title }}</p>
 							{{- end }}
@@ -58,19 +63,23 @@
 							<table>
 								<thead>
 									<tr>
+										<th></th>
 										<th scope="col">Date</th>
-										<th scope="col">Concert</th>
+										<th scope="col">Show name</th>
 										<th scope="col">Location</th>
-										<th scope="col">Tickets</th>
+										<th scope="col" class="tickets">Tickets</th>
+										<th></th>
 									</tr>
 								</thead>
 							<tbody>						
 							{{ range .Site.Data.shows.shows }}
 							  <tr>
+							  	<td></td>
 							  	<td>{{ dateFormat "2006/01/02" .time }} <br/> at {{ dateFormat "15:04" .time }}</td>
 							  	<td>{{ .title }}</td>
 							  	<td>at {{ .location }}</td>
-							  	<td><a href="{{ .tickets }}">Get Tickets!</a></td>
+							  	<td class="tickets"><a href="{{ .tickets }}">Get Tickets!</a></td>
+							  	<td></td>
 							  </tr>
 							{{ end }}
 							</tbody>
