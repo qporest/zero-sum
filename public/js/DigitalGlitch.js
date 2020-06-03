@@ -18,12 +18,12 @@ THREE.DigitalGlitch = {
 		"tDisp": { value: null }, //displacement texture for digital glitch squares
 		"byp": { value: 0 }, //apply the glitch ?
 		"amount": { value: 0.08 },
-		"angle": { value: 0.02 },
+		"angle": { value: 0.1 },
 		"seed": { value: 0.02 },
 		"seed_x": { value: 0.02 }, //-1,1
 		"seed_y": { value: 0.02 }, //-1,1
-		"distortion_x": { value: 0.5 },
-		"distortion_y": { value: 0.6 },
+		"distortion_x": { value: 0.8 },
+		"distortion_y": { value: 0.8	 },
 		"col_s": { value: 0.05 }
 	},
 

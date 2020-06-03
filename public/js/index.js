@@ -217,8 +217,7 @@ function init() {
 	
 	// composer.addPass(renderPass)
 	// composer.addPass(glitchPass)
-
-	document.querySelector("#name").appendChild( renderer.domElement )
+	addElementToDom(renderer.domElement)
 	window.addEventListener( 'resize', onWindowResize, false )
 
 }

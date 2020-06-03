@@ -31,3 +31,21 @@ collections:
               - {label: Location, name: location, widget: string}
               - {label: Ticket URL, name: tickets, widget: string}
               - {label: Start time, name: time, widget: datetime, dateFormat: MM.DD.YYYY, timeFormat: "HH:mm"}
+      - label: "Banner"
+        name: "banner"
+        file: 'data/banner.yml'
+        fields:
+          - label: "Choose Banner News"
+            name: "bannernews"
+            widget: "relation"
+            collection: "news"
+            searchFields: ["title"]
+            valueField: "{{slug}}"
+            displayFields: ["title"]
+            required: false
+          - label: "Featured Image"
+            name: "thumbnail"
+            widget: "image"
+            media_library:
+              config:
+                multiple: false

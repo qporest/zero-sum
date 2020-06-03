@@ -1,5 +1,4 @@
 body {
-	background: #DFE1D0;
 	border: 0;
 	margin: 0;
 }
@@ -16,34 +15,32 @@ canvas {
 	height: 100%;
 	overflow: hidden;
 }
-#name .background {
-	min-height: 1000px;
+/*#name .background {
 	position: absolute;
 	width: 30rem;
-	height: 300vh;
-	top: -100vh;
-	left: 60%;
-	/*transform-origin: center center;*/
-	transform: rotate(45deg);
-	border-left: 3px solid ;
-	background: #F15387;
-	background: black;
-}
+	height: 100vh;
+	top: 0;
+	left: 59%;
+	transform-origin: center center;
+	border-left: 3px solid;
+	border: 40px solid #39424E;
+	background: #39424E;
+}*/
 #name .text {
 	position: absolute;
+	margin: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	width: 30rem;
+	width: 100vw;
 	height: 100vh;
-	left: 59%;
-	top: 0%;
 	color: white;
 }
 
+
 #name .social {
 	display: flex;
-	width: 70%;
+	width: 100%;
 	flex-direction: row;
 	justify-content: space-around;
 }
@@ -60,13 +57,16 @@ canvas {
 	font-family: "Courier New";
 	text-align: center;
 	font-weight: lighter;
-	font-size: 6rem;
+	font-size: 4rem;
+	text-shadow: 4px 4px #9e0059;
+	opacity: 1;
 }
 
 /* Content section */
 #info {
 	position: relative;
 	padding-top: 100vh;
+	width: 100%;
 }
 
 #info .centered {
@@ -76,36 +76,165 @@ canvas {
 	justify-content: center;
 }
 
-nav {
-	position: -webkit-sticky; /* Safari */
-	position: sticky;
-	top: 0;
-}
-
-nav ul, nav li {
-	list-style: none;
-	display: inline-block;
-}
-
 
 .container {
 	display: grid;
+	grid-template-columns: 1fr 1fr;
 	grid-template-areas: 
-		"widget news "
-		"widget shows";
+		"widget info";
+	justify-items: center;
+}
+
+.container > * {
+	width: 100%;
+}
+
+.grid-info {
+	position: relative;
+	grid-area: info;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+
+.grid-info .card {
+	padding: 5px 12px;
+	margin-bottom: 15px;
 }
 
 .widget {
 	grid-area: widget;
-	background: #4F6CF4;
+	width: 100%;
+	min-height: 400px;
+	max-width: 500px;
+	/*background: #424662;	*/
+}
+
+.widget iframe {
+	max-height: 500px;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	display: block;
 }
 
 .latest-news {
 	background: #F25928;
-	grid-area: news;
 }
 
 .shows {
-	background: #C4FA54;
-	grid-area: shows;
+	background: #3E9DFC;
 }
+
+.banner {
+	width: 100%;
+	max-height: 150px;
+	display: flex;
+	flex-direction: row;	
+	background: #FF0069;
+	margin: 20px 0;
+}
+
+.banner img {
+	max-height: 150px;
+	display: inline-block;
+}
+
+.banner a {
+	color: white;
+}
+
+.banner h1 {
+	line-height: 150px;	
+	display: inline-block;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 600px;
+	margin: 12px auto;
+	text-align: left;
+}
+
+tr {
+	border-bottom: 1px solid white;
+	transition: background-color 0.2s ease-out;
+}
+
+tr:hover {
+	background: #555;
+}
+
+td {
+	box-sizing: border-box;
+	padding: 1px 3px;
+}
+
+#scroll-down {
+	position: absolute;
+	top: 80%;
+	left: calc(50% - 30px);
+	width: 60px;
+	height: 60px;
+	background: #9e0059;
+	clip-path: polygon(100% 50%, 50% 100%, 0 50%, 0 0, 50% 50%, 100% 0);
+	-webkit-clip-path: polygon(100% 50%, 50% 100%, 0 50%, 0 0, 50% 50%, 100% 0);
+	will-change: transform;
+	animation: InviteMove 1.5s ease-in-out 0s infinite normal forwards;
+}
+
+.card {
+	width: 100%;
+	max-width: 700px;
+	box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+	margin: 0 auto;
+}
+
+.button {
+	box-sizing: border-box;
+	padding: 5px 12px;
+	border-radius: 20px;
+	display: block;
+	margin: 0 auto;
+	background: #9e0059;
+	border: 2px solid #9e0059;
+	width: 200px;
+	font-size: 1.5rem;
+	color: white;
+	text-shadow: 2px 2px #9e0059;
+}
+
+/*#scroll-down {
+	position: absolute;
+	top: 80%;
+	left: calc(50% - 30px);
+	width: 0;
+	height: 0;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-top: 100px solid #400a4f;
+	animation: InviteMove 2s ease 0s infinite normal forwards;
+}
+
+#scroll-down:before {
+	content: "";
+	position: absolute;
+	top: 0%;
+	left: calc(50% - 30px);
+	width: 0;
+	height: 0;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-top: 100px solid #400a4f;
+}*/
+
+@keyframes InviteMove {
+    0.0%{
+        transform: translate3d(0, 0, 0);
+    }
+   
+    50%{
+        transform: translate3d(0, -20px, 0);
+    }
+} 

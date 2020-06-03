@@ -71,7 +71,7 @@ THREE.GlitchPass.prototype = Object.assign( Object.create( THREE.Pass.prototype 
 
 		}
 
-		this.curF += 1
+		this.curF += 0.1
 
 		this.quad.material = this.material;
 
