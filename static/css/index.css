@@ -139,7 +139,7 @@ canvas {
 }
 
 .banner img {
-	margin: 4px;
+	margin: 8px 20px;
 	max-height: 200px;
 	border: 2px solid white;
 	display: inline-block;
