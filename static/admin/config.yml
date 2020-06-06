@@ -18,7 +18,8 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'show-information'
-    label: 'Show Information'
+    label: 'Shows and Banner'
+    description: "Show list and news item featured in the banner"
     files: 
       - label: 'Show list'
         name: 'showlist'
@@ -52,6 +53,7 @@ collections:
                 multiple: false
   - name: 'gallery-and-about'
     label: 'Gallery and About pages'
+    description: "Choose images to be uploaded to gallery"
     files: 
       - label: "Gallery"
         name: "gallery"
@@ -66,3 +68,13 @@ collections:
                 multiple: true
             media_folder: '/content/gallery'
             public_folder: '/gallery'
+  - name: 'settings'
+    label: 'Settings'
+    files: 
+      - label: "Social links"
+        name: "social"
+        file: 'data/social.yml'
+        fields:
+          - { label: 'Spotify', name: 'spotify', widget: 'string' }
+          - { label: 'Facebook', name: 'facebook', widget: 'string' }
+          - { label: 'Instagram', name: 'instagram', widget: 'string' }

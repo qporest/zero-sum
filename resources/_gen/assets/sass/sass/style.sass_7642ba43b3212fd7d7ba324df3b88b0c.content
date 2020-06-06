@@ -122,8 +122,20 @@ section.navigation {
   @media screen and (max-width: 736px) {
     .top-menu {
       flex-direction: column; } }
+  .top-menu svg {
+    display: block;
+    fill: white;
+    max-height: 1.3rem;
+    transition: fill 0.2s ease-out; }
+    .top-menu svg:hover {
+      fill: #FC352F; }
   .top-menu span {
-    color: #FC352F; }
+    margin: 0 4px; }
+  .top-menu div.icon {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
   .top-menu a {
     color: white;
     text-shadow: 2px 2px #d95e00;
@@ -142,7 +154,7 @@ section.navigation {
   .top-menu ul, .top-menu li {
     opacity: 1;
     list-style: none;
-    display: inline-block; }
+    display: flex; }
 
 .footer {
   display: flex;

@@ -32,7 +32,7 @@ pygmentsCodefences       = true
 
 [[params.mainMenu]]
     link = "about"
-    text = "about / etk"
+    text = "about+epk"
 
 [imaging]
     quality = 75

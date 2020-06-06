@@ -142,13 +142,28 @@ section.navigation
     flex-direction: row
     justify-content: space-between
     font-size: 1.3rem
-    margin-bottom: 2rem;
+    margin-bottom: 2rem
 
     @media screen and (max-width: 736px)
         flex-direction: column
 
+    svg
+        display: block
+        fill: white
+        max-height: 1.3rem
+        transition: fill 0.2s ease-out
+        &:hover
+            fill: #FC352F
+
     span
-        color: #FC352F
+        // color: #FC352F
+        margin: 0 4px
+
+    div.icon
+        margin-right: 10px
+        display: flex
+        flex-direction: column
+        justify-content: center
 
     a
         color: white
@@ -170,7 +185,7 @@ section.navigation
     ul, li
         opacity: 1
         list-style: none
-        display: inline-block
+        display: flex
 
 
 .footer
