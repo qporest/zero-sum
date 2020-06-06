@@ -21,7 +21,7 @@
 			<!-- <div class="background"> </div> -->
 			<div class="text">
 				<h2>zero-sum</h2>
-				<button class="button">Listen now!</button>
+				<a class="button" href="#widget">Listen now!</a>
 				<div class="social">
 					<div>A</div>
 					<div>B</div>
@@ -49,17 +49,20 @@
 			{{ end }}
 			<div class="centered">
 				<div class="container">
-					<div class="widget">
+					<div class="widget" id="widget">
 						<iframe class="card" src="https://open.spotify.com/embed/album/5RQlhjpn4qz3q2vRrAGYD9" width="320" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 					</div>
 					<div class="grid-info">
+						{{- range ( where site.RegularPages "Section" "news" | first 1 ) }}
 						<div class="latest-news card">
 							<h2>Latest news:</h2>
-							{{- range ( where site.RegularPages "Section" "news" | first 1 ) }}
-							<p>{{ .Title }}</p>
-							{{- end }}
+							<a href="{{ .RelPermalink }}">
+								{{ .Title }}
+							</a>
 						</div>
+						{{- end }}
 						<div class="shows card">
+							<h2>List of upcoming shows:</h2>
 							<table>
 								<thead>
 									<tr>
