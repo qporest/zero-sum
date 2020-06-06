@@ -45,6 +45,11 @@ canvas {
 	justify-content: space-around;
 }
 
+#name .social a {
+	border-bottom: 0;
+	max-width: 10%;
+}
+
 #name .social div {
 	color: white;
 }

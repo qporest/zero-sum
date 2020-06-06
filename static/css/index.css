@@ -15,17 +15,7 @@ canvas {
 	height: 100%;
 	overflow: hidden;
 }
-/*#name .background {
-	position: absolute;
-	width: 30rem;
-	height: 100vh;
-	top: 0;
-	left: 59%;
-	transform-origin: center center;
-	border-left: 3px solid;
-	border: 40px solid #39424E;
-	background: #39424E;
-}*/
+
 #name .text {
 	position: absolute;
 	margin: auto;
@@ -42,15 +32,21 @@ canvas {
 	display: flex;
 	width: 100%;
 	flex-direction: row;
-	justify-content: space-around;
+	margin: 20px 0;
+	justify-content: center;
 }
 
-#name .social div {
-	color: white;
+#name .social a {
+	margin: 0 .5rem;
+	max-width: 3rem;
+	border-bottom: 0;
 }
 
-#name .social li {
-	display: 
+#name .social a svg {
+	transition: fill 0.2s ease-in-out;
+}
+#name .social a svg:hover {
+	fill: #9e0059;
 }
 
 #name .text h2 {
@@ -70,12 +66,15 @@ canvas {
 }
 
 #info .centered {
-	min-height: 100vh;
+	min-height: 90vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
+.footer {
+	margin-top: 0 !important;
+}
 
 .container {
 	display: grid;
