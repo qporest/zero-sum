@@ -19,7 +19,7 @@
             
             {{ if ( gt ( len .Page.Site.Params.mainMenu ) 1 ) }}
                 {{ range after 1 .Page.Site.Params.mainMenu }}
-                    <li><a href="{{ .link | relURL }}">{{ .text }}</a></li>
+                    <li>| <a href="{{ .link | relURL }}">{{ .text }}</a></li>
                 {{ end }}
             {{ end }}
         {{ end }}

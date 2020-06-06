@@ -164,6 +164,13 @@ section.navigation {
     .footer a:hover {
       color: #ff9340; }
 
+.news ul li a {
+  opacity: 1; }
+
+.news ul li h2 {
+  opacity: 1;
+  margin-bottom: 0; }
+
 #splash {
   margin: auto 0;
   height: 100vh;
