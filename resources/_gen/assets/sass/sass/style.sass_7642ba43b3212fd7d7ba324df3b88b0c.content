@@ -150,14 +150,19 @@ section.navigation {
   background-color: transparent;
   position: relative;
   bottom: 0;
+  min-height: 120px;
   font-family: "Didact Gothic", "sans serif";
   font-size: 1rem;
   line-height: 1em;
   opacity: 0.8;
   margin-top: 3em; }
   .footer a {
+    color: #d95e00;
     border-bottom: none;
-    display: contents; }
+    display: contents;
+    transition: color 0.2s ease-in; }
+    .footer a:hover {
+      color: #ff9340; }
 
 #splash {
   margin: auto 0;

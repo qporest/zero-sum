@@ -14,7 +14,7 @@ pygmentsCodefences       = true
     dateformfull         = "Mon Jan 2 2006 15:04:05 EST"
     favicon              = "sam.ico"
     homepage             = "main"                           # What to call the home page link
-    footerText           = "zero-sum's website created by @qporest using Hugo and modified theme Sam"
+    footerText           = "zero-sum's website created by [@qporest](https://www.qporest.com) using [Hugo](https://gohugo.io/) and modified theme [Sam](https://github.com/victoriadrake/hugo-theme-sam/)"
 
 # Metadata for Open Graph and Twitter
     description          = "Punk rock band from OH."               # Max 160 characters show in search results

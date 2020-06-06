@@ -182,6 +182,7 @@ section.navigation
     background-color: transparent
     position: relative
     bottom: 0
+    min-height: 120px
     // padding: 1rem
     font-family: $font
     font-size: 1rem
@@ -189,8 +190,14 @@ section.navigation
     opacity: 0.8
     margin-top: 3em
     a
+        color: #d95e00
         border-bottom: none
         display: contents
+        transition: color 0.2s ease-in
+
+        &:hover
+            color: lighten(#d95e00, 20%)
+
 
 @import "elements"
 
