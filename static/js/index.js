@@ -56,14 +56,12 @@ class Row {
 			newC.position.set(last.position.x - (SPRITE_HEIGHT + SPRITE_SPACING), 
 							  last.position.y - (SPRITE_HEIGHT + SPRITE_SPACING),
 							  last.position.z)
-			console.log("Became", this.group.children.length, newC.position.x + this.group.position.x, newC.position.y + this.group.position.y, newC.position.z)
 			this.group.add(newC)
 			this.first = this.getFirst()
 		} else 
 		if (this.direction == Row.DIRECTION_DOWN &&
 			this.first.position.y + this.group.position.y <  - SPRITE_HEIGHT
 		){
-			console.log("Adding element going down")
 			this.group.remove(this.first)
 
 			let last = this.getLast()
@@ -102,6 +100,42 @@ function getSpriteN(width, height){
 	return Math.floor(1.5 * (width + height) / (SPRITE_HEIGHT + SPRITE_SPACING)) + 1
 }
 
+function createNewRow(group, direction){
+	let row
+	if(direction === Row.DIRECTION_UP){
+		group.position.x -= (spriteN - 1) * (SPRITE_HEIGHT + SPRITE_SPACING)
+		group.position.y -= (spriteN - 1) * (SPRITE_HEIGHT + SPRITE_SPACING)
+		row = new Row(Row.DIRECTION_UP, group)
+	} else {
+		group.position.x += window.innerHeight
+		group.position.y += window.innerHeight
+		row = new Row(Row.DIRECTION_DOWN, group)
+	}
+	return row
+}
+
+function createNewGroup(sprite, rowPos){
+	let group = new THREE.Group()
+
+	for ( let a = 0; a < spriteN; a ++ ) {
+
+		var x = a * (SPRITE_HEIGHT + SPRITE_SPACING)
+		var y = a * (SPRITE_HEIGHT + SPRITE_SPACING)
+		var z = 0
+
+		let sprite = getSpriteCopy()
+
+		sprite.position.set( x, y, z )
+		
+		group.add( sprite )
+
+	}
+	group.position.x =  - window.innerHeight + rowPos * Math.floor(100 / RATIO_PER_100)
+	group.position.y = 0
+	return group
+}
+
+
 function init() {
 
 	var width = window.innerWidth
@@ -137,38 +171,18 @@ function init() {
 	let sprite_height = SPRITE_HEIGHT
 	sprite.center.set(0.5, 0.5)
 	sprite.scale.set(sprite_width, sprite_height, 1)
-	
+	var row
+
 	for(let i = 0; i<rowN; i++){
-		let group = new THREE.Group()
-
-		for ( let a = 0; a < spriteN; a ++ ) {
-
-			var x = a * (SPRITE_HEIGHT + SPRITE_SPACING)
-			var y = a * (SPRITE_HEIGHT + SPRITE_SPACING)
-			var z = 0
-
-			var material
-
-			let sprite = getSpriteCopy()
-
-			sprite.position.set( x, y, z )
-			
-			group.add( sprite )
-
-		}
-		group.position.x =  - height + i * Math.floor(100 / RATIO_PER_100)
-		group.position.y = 0
 		
-		var row	
-		if(i % 2 == 0){
-			group.position.x -= (spriteN - 1) * (SPRITE_HEIGHT + SPRITE_SPACING)
-			group.position.y -= (spriteN - 1) * (SPRITE_HEIGHT + SPRITE_SPACING)
-			row = new Row(Row.DIRECTION_UP, group)
+		let group = createNewGroup(sprite, i)
+		
+		if(i%2==0){
+			row	= createNewRow(group, Row.DIRECTION_UP)
 		} else {
-			group.position.x += height
-			group.position.y += height
-			row = new Row(Row.DIRECTION_DOWN, group)
+			row	= createNewRow(group, Row.DIRECTION_DOWN)
 		}
+		
 		groups.push(row)
 		scene.add( group )
 	}
@@ -238,9 +252,21 @@ function onWindowResize() {
 function updateRows(width, height){
 	let newN = getRowsN(width, height)
 	if( newN > rowN ){
+		console.log("Adding rows")
 		for(let i=0; i<newN-rowN; i++){
+			let group = groups[groups.length-2].group.clone()
+			group.position.x += 2 * Math.floor(100 / RATIO_PER_100)
+			let newRow
+			if( (i+rowN) % 2==0){
+				newRow = new Row(Row.DIRECTION_UP, group)
+			} else {
+				newRow = new Row(Row.DIRECTION_DOWN, group)
+			} 
 
+			groups.push(newRow)
+			scene.add(newRow.group)
 		}
+		rowN = newN
 	}
 }
 
