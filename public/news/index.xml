@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>News on Zero-Sum</title>
-    <link>https://example.com/news/</link>
+    <link>https://ecstatic-sinoussi-95242d.netlify.app/news/</link>
     <description>Recent content in News on Zero-Sum</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 09 May 2020 03:15:06 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/news/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ecstatic-sinoussi-95242d.netlify.app/news/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Wow, does this work?</title>
-      <link>https://example.com/news/2020-05-09-wow-does-this-work/</link>
+      <link>https://ecstatic-sinoussi-95242d.netlify.app/news/2020-05-09-wow-does-this-work/</link>
       <pubDate>Sat, 09 May 2020 03:15:06 +0000</pubDate>
       
-      <guid>https://example.com/news/2020-05-09-wow-does-this-work/</guid>
+      <guid>https://ecstatic-sinoussi-95242d.netlify.app/news/2020-05-09-wow-does-this-work/</guid>
       <description>Hello scumfucks!</description>
     </item>
     

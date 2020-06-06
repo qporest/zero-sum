@@ -64,5 +64,5 @@ collections:
             media_library:
               config:
                 multiple: true
-            media_folder: 'content/gallery'
+            media_folder: '/content/gallery'
             public_folder: '/gallery'

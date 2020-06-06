@@ -3,26 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.com/news/</loc>
+    <loc>https://ecstatic-sinoussi-95242d.netlify.app/</loc>
+    <lastmod>2020-05-09T03:15:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ecstatic-sinoussi-95242d.netlify.app/news/</loc>
     <lastmod>2020-05-09T03:15:06+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/news/2020-05-09-wow-does-this-work/</loc>
+    <loc>https://ecstatic-sinoussi-95242d.netlify.app/news/2020-05-09-wow-does-this-work/</loc>
     <lastmod>2020-05-09T03:15:06+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/</loc>
-    <lastmod>2020-05-09T03:15:06+00:00</lastmod>
+    <loc>https://ecstatic-sinoussi-95242d.netlify.app/about/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://ecstatic-sinoussi-95242d.netlify.app/gallery/</loc>
   </url>
   
   <url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://ecstatic-sinoussi-95242d.netlify.app/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ecstatic-sinoussi-95242d.netlify.app/tags/</loc>
   </url>
   
 </urlset>

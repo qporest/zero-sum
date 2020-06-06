@@ -97,11 +97,6 @@ canvas {
 	flex-direction: column;
 }
 
-.grid-info .card {
-	padding: 5px 12px;
-	margin-bottom: 15px;
-}
-
 .widget {
 	grid-area: widget;
 	width: 100%;
@@ -118,57 +113,123 @@ canvas {
 	display: block;
 }
 
-.latest-news {
-	background: #F25928;
+.card.latest-news {
+	padding: 5px 12px;
+	background: rgba(255, 0, 105, 0.3);
+	margin-bottom: 15px;
+	border: 1px solid #8E0B3C;
 }
 
-.shows {
-	background: #3E9DFC;
-}
+
 
 .banner {
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5), 0 10px 10px rgba(0,0,0,0.25);
 	width: 100%;
-	max-height: 150px;
-	display: flex;
-	flex-direction: row;	
-	background: #FF0069;
-	margin: 20px 0;
+	/*max-height: 150px;*/
+	display: block;
+	background: rgb(255,0,105);
+	/*background: linear-gradient(90deg, rgba(255,0,105,1) 0%, rgba(255,0,84,1) 50%, rgba(255,84,0,1) 100%);	*/
+	background: linear-gradient(90deg, rgba(255,0,105,1) 0%, rgba(0,179,255,1) 50%, rgba(0,255,126,1) 100%); 
+	margin-bottom: 20px;
+	border: 0;
 }
+
 
 .banner img {
-	max-height: 150px;
+	margin: 8px 20px;
+	max-height: 200px;
+	border: 2px solid white;
 	display: inline-block;
+	/*box-shadow: -40px 0px 20px rgba(0,0,0,0.5);*/
 }
 
-.banner a {
-	color: white;
+.banner > div {
+	display: flex;
+	height: 100%;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 
 .banner h1 {
-	line-height: 150px;	
+	box-sizing: border-box;
+	padding: 0 20px;
+	opacity: 1;
+	text-shadow: none;	
 	display: inline-block;
+	position: relative;
+}
+
+.banner h1:before {
+	content: "";
+    height: 2px;
+    left: 10%;
+    position: absolute;
+    width: 80%;
+    bottom: -25px;
+    background: transparent;
+    border-radius: 2px;
+    will-change: transform, background;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.banner:hover div .banner-info h1:before {
+	transform: translateY(-20px);
+	background: white;
+}
+
+.banner-info {
+	text-align: center;
+}
+
+.banner-info h4 {
+	color: #101010	;
+}
+
+.shows {
+	background: rgba(79, 96, 240, 0.3);
+	border: 1px solid #3643A2;
+}
+
+.shows h2 {
+	padding: 5px 12px;
 }
 
 table {
 	border-collapse: collapse;
 	width: 100%;
-	max-width: 600px;
 	margin: 12px auto;
 	text-align: left;
+	vertical-align: middle;
 }
 
 tr {
-	border-bottom: 1px solid white;
+	padding: 0px 20px;
 	transition: background-color 0.2s ease-out;
 }
 
-tr:hover {
-	background: #555;
+tr a {
+	color: #F7C100;
+	border-bottom: 0px;
 }
 
-td {
+tbody tr:nth-child(odd) {
+  background: rgba(79, 96, 240, 0.4);
+}
+
+tbody tr:hover {
+	background: rgba(100,100,100,0.5);
+}
+
+.tickets {
+	text-align: center;
+	min-width: 20%;
+}
+
+td, th {
+	min-width: 5px;
 	box-sizing: border-box;
-	padding: 1px 3px;
+	padding: 1px 5px;
 }
 
 #scroll-down {
@@ -191,7 +252,9 @@ td {
 	margin: 0 auto;
 }
 
+
 .button {
+	text-align: center;
 	box-sizing: border-box;
 	padding: 5px 12px;
 	border-radius: 20px;
@@ -203,31 +266,13 @@ td {
 	font-size: 1.5rem;
 	color: white;
 	text-shadow: 2px 2px #9e0059;
+	transition: background 0.2s ease-in;
 }
 
-/*#scroll-down {
-	position: absolute;
-	top: 80%;
-	left: calc(50% - 30px);
-	width: 0;
-	height: 0;
-	border-left: 30px solid transparent;
-	border-right: 30px solid transparent;
-	border-top: 100px solid #400a4f;
-	animation: InviteMove 2s ease 0s infinite normal forwards;
+.button:hover {
+	color: white;
+	background: #66083A;
 }
-
-#scroll-down:before {
-	content: "";
-	position: absolute;
-	top: 0%;
-	left: calc(50% - 30px);
-	width: 0;
-	height: 0;
-	border-left: 30px solid transparent;
-	border-right: 30px solid transparent;
-	border-top: 100px solid #400a4f;
-}*/
 
 @keyframes InviteMove {
     0.0%{
@@ -238,3 +283,25 @@ td {
         transform: translate3d(0, -20px, 0);
     }
 } 
+
+@media screen and (max-width: 355px) {
+	#name .text h2 {
+		font-size: 3rem;
+	}
+	.top-menu {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.container {
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			"widget"
+			"info";
+	}
+	.widget {
+		max-width: 1000px;
+		margin-bottom: 20px;
+	}
+}

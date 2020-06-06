@@ -1,3 +1,4 @@
+logo_url: https://ecstatic-sinoussi-95242d.netlify.app/img/haywire3idea.png
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
@@ -49,3 +50,19 @@ collections:
             media_library:
               config:
                 multiple: false
+  - name: 'gallery-and-about'
+    label: 'Gallery and About pages'
+    files: 
+      - label: "Gallery"
+        name: "gallery"
+        file: 'data/gallery.yml'
+        fields:
+          - label: Images
+            name: image
+            widget: image
+            required: false
+            media_library:
+              config:
+                multiple: true
+            media_folder: '/content/gallery'
+            public_folder: '/gallery'
