@@ -42,9 +42,13 @@
 			{{ end }}
 			{{ if .GetPage (printf "%s%s" "news/" .Site.Data.banner.bannernews) }}
 				{{ with .GetPage (printf "%s%s" "news/" .Site.Data.banner.bannernews) }}
+
 				<a href="{{ .RelPermalink }}" class="banner">
 					<div>
-						<img src="{{ .Site.Data.banner.thumbnail }}" alt="">
+						{{ $image := resources.Get .Site.Data.banner.thumbnail }}
+						{{ $resized := $image.Resize "600x" }}
+						<img src='{{ $resized.RelPermalink }}'>
+
 						<div class="banner-info">
 							<h1>{{ .Title }}</h1>
 							<h4>Read now!</h4>

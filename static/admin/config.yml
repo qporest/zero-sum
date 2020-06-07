@@ -48,6 +48,8 @@ collections:
           - label: "Featured Image"
             name: "thumbnail"
             widget: "image"
+            media_folder: '/assets/banner'
+            public_folder: '/banner'
             media_library:
               config:
                 multiple: false
