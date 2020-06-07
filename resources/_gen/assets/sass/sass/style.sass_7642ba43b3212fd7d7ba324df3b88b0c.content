@@ -132,6 +132,7 @@ section.navigation {
   .top-menu span {
     margin: 0 4px; }
   .top-menu div.icon {
+    box-sizing: border-box;
     margin-right: 10px;
     display: flex;
     flex-direction: column;
@@ -148,9 +149,12 @@ section.navigation {
     @media screen and (max-width: 736px) {
       .top-menu a {
         margin: auto; } }
-  @media screen and (max-width: 736px) {
-    .top-menu ul {
-      margin: auto; } }
+  .top-menu ul {
+    flex-wrap: wrap; }
+    @media screen and (max-width: 736px) {
+      .top-menu ul {
+        justify-content: center;
+        margin: auto; } }
   .top-menu ul, .top-menu li {
     opacity: 1;
     list-style: none;

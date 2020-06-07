@@ -160,6 +160,7 @@ section.navigation
         margin: 0 4px
 
     div.icon
+        box-sizing: border-box
         margin-right: 10px
         display: flex
         flex-direction: column
@@ -179,7 +180,9 @@ section.navigation
             margin: auto
    
     ul
+        flex-wrap: wrap
         @media screen and (max-width: 736px)
+            justify-content: center
             margin: auto
 
     ul, li

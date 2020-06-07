@@ -13,7 +13,6 @@ class Row {
 	static get DIRECTION_DOWN(){
 		return -1
 	}
-	CHANGE=1
 
 	constructor(dir, group){
 		this.direction = dir || Row.DIRECTION_UP
@@ -42,8 +41,8 @@ class Row {
 	}
 
 	update(){
-		this.group.position.x += this.direction * this.CHANGE
-		this.group.position.y += this.direction * this.CHANGE 
+		this.group.position.x += this.direction
+		this.group.position.y += this.direction 
 		// if(this.group.position.y > window.innerHeight + SPRITE_HEIGHT || this.group.position.y + (spriteN) * (SPRITE_HEIGHT + SPRITE_SPACING) < 0 ){
 		// 	this.reverse()
 		// }
