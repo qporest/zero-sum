@@ -124,7 +124,6 @@
 		<script src="/js/DigitalGlitch.js"></script>
 		<script src="/js/GlitchPass.js"></script>
 		<script src="/js/index.js"></script> -->
-		<p>{{ resources.Match "js/*.js" | sort }}</p>
 		{{ $js := resources.Match "js/*.js"  | resources.Concat "js/index-concat.js" | resources.Minify }}
 		<script src="{{ $js.RelPermalink }}"></script>
 		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

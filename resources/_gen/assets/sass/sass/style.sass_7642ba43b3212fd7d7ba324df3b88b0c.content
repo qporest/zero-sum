@@ -187,6 +187,41 @@ section.navigation {
   opacity: 1;
   margin-bottom: 0; }
 
+.contact {
+  overflow: hidden;
+  background: #571BB7;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.25); }
+  .contact .call-to-action {
+    padding: 15px 30px 30px 30px;
+    background: black;
+    border-bottom: 2px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.25); }
+  .contact form {
+    padding: 5px 10px;
+    max-width: 60em;
+    margin: auto;
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; }
+    .contact form > * {
+      display: block; }
+    .contact form input, .contact form textarea {
+      background: transparent;
+      color: white;
+      padding: 5px 12px;
+      border: 0;
+      margin: 0;
+      font-size: 1.2rem;
+      width: 100%;
+      outline: none; }
+    .contact form input {
+      border-bottom: 1px solid black; }
+    .contact form textarea {
+      min-height: 150px;
+      resize: none; }
+    .contact form button {
+      background: transparent;
+      margin: 10px auto;
+      max-width: 300px; }
+
 #splash {
   margin: auto 0;
   height: 100vh;
@@ -292,6 +327,24 @@ article {
       color: #FFFFFF; }
       article .gist .gist-meta a {
         color: #FFFFFF; }
+
+.button {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  background: #9e0059;
+  border: 2px solid #9e0059;
+  width: 200px;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px #9e0059;
+  transition: background 0.2s ease-in; }
+  .button:hover {
+    color: white;
+    background: #66083A; }
 
 .tag {
   padding: 0.25em 0em;

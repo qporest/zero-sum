@@ -235,7 +235,7 @@ td, th {
 #scroll-down {
 	position: absolute;
 	top: 80%;
-	left: calc(50% - 30px);
+	left: calc(50vw - 30px);
 	width: 60px;
 	height: 60px;
 	background: #9e0059;
@@ -252,27 +252,6 @@ td, th {
 	margin: 0 auto;
 }
 
-
-.button {
-	text-align: center;
-	box-sizing: border-box;
-	padding: 5px 12px;
-	border-radius: 20px;
-	display: block;
-	margin: 0 auto;
-	background: #9e0059;
-	border: 2px solid #9e0059;
-	width: 200px;
-	font-size: 1.5rem;
-	color: white;
-	text-shadow: 2px 2px #9e0059;
-	transition: background 0.2s ease-in;
-}
-
-.button:hover {
-	color: white;
-	background: #66083A;
-}
 
 @keyframes InviteMove {
     0.0%{

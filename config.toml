@@ -34,5 +34,9 @@ pygmentsCodefences       = true
     link = "about"
     text = "about+epk"
 
+[[params.mainMenu]]
+    link = "contact"
+    text = "contact"
+
 [imaging]
     quality = 75

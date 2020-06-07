@@ -1,0 +1,20 @@
+{{ define "section_content" }}
+
+<div class="contact">
+    <div class="call-to-action">
+        <h2>Contact us</h2>
+        <h3>If you'd like to reach us, contact us through social media or send a message right from this page!</h3>
+    </div>
+    <form name="contact" method="POST" data-netlify="true">
+        <!-- <label for="name"><h3>Your Name:</h3></label> -->
+        <input type="text" name="name" placeholder="Enter your name here." />
+        <!-- <label for="email"><h3>Your Email:</h3></label> -->
+        <input type="email" name="email" placeholder="Enter your email here." />
+        <!-- <label for="message"><h3>Message:</h3></label> -->
+        <textarea name="message" placeholder="What's your message?"></textarea>
+        <button type="submit" class="button">Send</button>
+    </form>
+</div>
+
+
+{{ end }}

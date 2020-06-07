@@ -1,22 +1,7 @@
 {{ define "section_content" }}
-<article class="flex-container">
-    {{ .Content }}
-</article>
-<nav role="navigation">
-    <p>
-    	This is an about page.
-    </p>
-    <ul>
-        {{ range .Data.Pages }}
-        <li>
-            {{ if .Params.showDate }}
-            {{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006")}} --
-            {{ end }}
-            <a href="{{.RelPermalink}}">
-                {{.Title | markdownify}}
-            </a>
-        </li>
-        {{ end }}
-    </ul>
-</nav>
+
+<p>
+	This is an about page.
+</p>
+
 {{ end }}
