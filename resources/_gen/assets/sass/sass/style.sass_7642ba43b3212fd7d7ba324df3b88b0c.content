@@ -125,7 +125,7 @@ section.navigation {
   .top-menu svg {
     display: block;
     fill: white;
-    max-height: 1.3rem;
+    height: 1.3rem;
     transition: fill 0.2s ease-out; }
     .top-menu svg:hover {
       fill: #FC352F; }
