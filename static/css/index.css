@@ -97,6 +97,7 @@ canvas {
 }
 
 .widget {
+	position: relative;
 	grid-area: widget;
 	width: 100%;
 	min-height: 400px;
@@ -106,7 +107,7 @@ canvas {
 
 .widget iframe {
 	max-height: 500px;
-	height: 100%;
+	/*height: 100%;*/
 	width: 100%;
 	margin: auto;
 	display: block;
